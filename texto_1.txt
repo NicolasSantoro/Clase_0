@@ -2,4 +2,5 @@
 
 git init => Creamos un repositorio.
 git status => Vemos la información del repositorio.
-git add => Pasar archivo al área de seguimiento.
+git add . => Pasar archivo al área de seguimiento.
+git commit -m 'Un mensaje representativo¨ => Pasar un archivo al repositorio local.
