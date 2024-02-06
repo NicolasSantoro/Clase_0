@@ -25,8 +25,24 @@ Podemos usar un PROMPT para recibir un valor o dato del usuario.
 Tanto las QUESTION como los PROMPT pueden guardarse en variables, para acortar el código.
     Ej1: respuesta_usuario = Question('ALERTA', '¿Está seguro que desea continuar?')
     Ej2: nombre_ingresado = prompt('Ingrese su nombre', 'Nombre')
-    
+
 También podemos ¨fusionarlos¨
     Ej: nombre_ingresado = prompt('Ingresar nombre', 'Nombre')
         tittle = 'Su nombre es...'
         alert(tittle, nombre_ingresado)
+
+
+Arriba del botón MOSTRAR (self.btn_mostrar = customtkinter.CTkButton(master=self, text="Mostrar", command=self.btn_mostrar_on_click)), se pueden poner cajas te texto (self.txt_nombre = customtkinter.CTkEntry(master=self) (por ekemplo)).
+La información de dichas cajas de texto puede extraerse (self.txt_nombre.get()) para poder ponerla en un ALERT (por ejemplo).
+    Ej: nombre_ingresado = self.txt_nombre.get()
+        alert('Nombre Ingresado', nombre_ingresado)
+También se puede hacer justamente lo contrario, se puede poner información en un PROMPT para ponerla en el SELF.TXT (que sería la caja de texto arriba del botón MOSTRAR).  
+Para hacerlo, hay que borrar la información anterior para que no se solapen(.delete)
+    Ej: nombre_ingresado = prompt('Ingrese su Nombre', 'Nombre')
+        self.txt_nombre.delete(0, 3000)
+        self.txt_nombre.insert(0, nombre_ingresado)
+
+Se pueden concatenar (¨Unir o enlazar dos o más cosas¨) variables en un mismo MESSAGE.
+    Ej: nombre_usuario = self.txt_nombre.get()
+        edad_usuario = self.txt_edad.get()
+        alert('INFORMACIÓN PERSONAL', 'Usted se llama ' + nombre_usuario + ' y su edad es de ' + edad_usuario + ' años.')
