@@ -1,0 +1,27 @@
+Variables:
+    Variable = número : Variable del tipo ENTERO.
+    Variable = número (con decimales) : Variable del tipo FLOAT.
+    Variable = 'Palabra' : Variable del tipo STRING (Puede tener infinitos valores).
+    Variable = NONE : Variable del tipo NONE (No tiene valor, está vacía).
+    Variable = True / False : Variable del tipo BOOL.
+Los tipos de datos (variables) pueden cambiar a lo largo del código = Tipado Dinámico. El Tipado Fuerte impide alterar las variables a lo largo del código.
+
+Podemos usar un ALERT para mostrarle información al usuario con una ventana emergente. (Viene importado).
+    Ej: Tittle = 'ALERTA' 
+        Message = 'Tenga cuidado al presionar el siguiente botón'
+        Alert(Tittle, Message)
+Podemos usar un QUESTION para hacerle una pregunta (de SÍ o NO. SÍ es TRUE y NO es FALSE) para obtener información del usuario.
+    Ej: Tittle = 'ALERTA'
+        Message = '¿Está seguro que desea continuar?'
+        Question(Tittle, Message)
+Podemos usar un PROMPT para recibir un valor o dato del usuario.
+    Ej: Tittle = 'Ingrese su nombre'
+        Prompt = 'Nombre'
+        prompt('Ingrese su nombre', 'Nombre')
+Tanto las QUESTION como los PROMPT pueden guardarse en variables, para acortar el código.
+    Ej1: respuesta_usuario = Question('ALERTA', '¿Está seguro que desea continuar?')
+    Ej2: nombre_ingresado = prompt('Ingrese su nombre', 'Nombre')
+También podemos ¨fusionarlos¨
+    Ej: Tittle = 'Su nombre es:'
+        nombre_ingresado = prompt('Ingrese su nombre', 'Nombre')
+        alert(message, nombre_ingresado)
