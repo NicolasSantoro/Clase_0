@@ -1,5 +1,3 @@
-¡Hola GIT!
-
 git init => Creamos un repositorio.
 
 git status => Vemos la información del repositorio.
