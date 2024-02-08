@@ -30,7 +30,7 @@ También se puede hacer a la inversa poniendo STR(variable):
         resultado = primer_numero + segundo_numero
 
         alert('SUMA', 'El resultado de la suma es ' + str(resultado))
-FLOTAT() hace lo mismo que el INT() pero la gran diferencia es que admite también números decimales.
+FLOAT() hace lo mismo que el INT() pero la gran diferencia es que admite también números decimales.
     Ej: sueldo = float(self.txt_sueldo.get())
         
         importe = sueldo * 0.15
