@@ -1,0 +1,63 @@
+Existe un formato re recompilación de datos llamado .FORMAT, el cual te permite organizar la información de forma mucho más fácil, asignano las valiables a números.
+    Ej: nombre_usuario = self.txt_nombre.get()
+        edad_usuario = self.txt_edad.get()
+
+        message = 'Usted se llama {0} y su edad es de {1} años.'.format(nombre_usuario, edad_usuario)
+
+        alert('INFORMACIÓN PERSONAL', message)
+Otra forma de hacerlo es con el ¨fString¨, el cual se le deben aplicar llaves a las variables para que funcionen.
+    Ej: nombre_usuario = self.txt_nombre.get()
+        edad_usuario = self.txt_edad.get()
+        mensaje = f'Usted se llama {nombre_usuario} y su edad es de {edad_usuario} años'
+
+
+Hay 2 operadores (por el momento):
+= => Asignación
++ => Concatena variables y realiza sumas.
+
+
+El tipo de dato INT() transforma los resultados numéricos de texto (string) a un número entero.
+    Ej: primer_numero = int(self.txt_operador_a.get())
+        segundo_numero = int(self.txt_operador_b.get())
+
+        resultado = primer_numero + segundo_numero
+
+        alert('SUMA', resultado)
+También se puede hacer a la inversa poniendo STR(variable):
+    Ej: primer_numero = int(self.txt_operador_a.get())
+        segundo_numero = int(self.txt_operador_b.get())
+
+        resultado = primer_numero + segundo_numero
+
+        alert('SUMA', 'El resultado de la suma es ' + str(resultado))
+FLOTAT() hace lo mismo que el INT() pero la gran diferencia es que admite también números decimales.
+    Ej: sueldo = float(self.txt_sueldo.get())
+        
+        importe = sueldo * 0.15
+
+        alert('IMPORTE FINAL', 'El importe de sueldo actualizado con el incremento del 0.15 es de ' + str(importe))
+
+
+% (Módulo)=> Otorga el resto de una división.
+
+ANOTACIÓN: PARA CALCULAR FÁCILMENTE UN AUMENTO O DECRECIMIENTO (EN PORCENTAJE) USAR LO SIGUIENTE:
+        IMPORTE o SUELDO = int(self.txt_importe.get())
+        INCREMENTO o DECRECIMIENTO = int(self.txt_descuento.get())
+
+        porcentaje = INCREMENTO o DECRECIMIENTO / 100
+
+        AUEMNTO o DESCUENTO = importe * porcentaje
+    
+        importe_actualizado = importe + o - AUEMNTO o DESCUENTO
+
+        alert('RESULTADO FINAL', importe_actualizado)
+
+
+IF es un condicional. Permite que la máquina tome decisiones según ciertas condiciones. (Si se cumple la condición es TRUE, si no se cumple la condición es FALSE)
+    Ej: edad = int(self.txt_edad.get())
+
+        if edad == 18:
+            alert('ATENCIÓN', 'Usted tiene 18 años')
+
+Operadores lógicos:
+== => Comparación
