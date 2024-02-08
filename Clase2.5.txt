@@ -1,0 +1,75 @@
+Dentro del IF, pueden haber más de una sola condición:
+    Ej: edad = int(self.txt_edad.get())
+
+        if 13 <= edad <= 17:
+            alert('ALERTA', 'USTED EFECTIVAMENTE ES UN ADOLESCENTE.')
+Además, pueden haber varias condiciones sobre una misma variable:
+    Ej: edad = int(self.txt_edad.get())
+
+        if edad >= 18:
+            alert('ATENCIÓN', 'USTED ES UNA PERSONA MAYOR DE EDAD')
+        if edad < 10:
+            alert('ATENCIÓN', 'USTED ES UN NIÑ@')
+        if edad >= 10 and edad <= 13:
+            alert('ATENCIÓN', 'USTED ES UN PRE-ADOLESCENTE')
+        if edad >= 13 and edad <= 17:
+            alert('ALERTA', 'USTED ES UN ADOLESCENTE.')
+También pueden haber varias condiciones distintas en una misma variable:
+    Ej: edad = int(self.txt_edad.get())
+        tipo = self.combobox_tipo.get()
+
+        if edad >= 16 and tipo == 'NATIVO':
+            alert('FELICIDADES', 'USTED YA PUEDE VOTAR')
+        if edad < 16 and tipo == 'NATIVO':
+            alert('FELICIDADES', 'USTED NO PUEDE VOTAR')
+
+        if edad >= 18 and tipo == 'NATURALIZADO':
+            alert('FELICIDADES', 'USTED YA PUEDE VOTAR')
+        if edad < 18 and tipo == 'NATURALIZADO':
+            alert('FELICIDADES', 'USTED NO PUEDE VOTAR')
+El IF funciona en base a TRUE y FALSE. Es TRUE cuando se cumple la condición, y es FALSE cuando dicha condición no se cumple.
+Si se desea realizar una acción cuando el resultado es FALSE, se usa ELSE
+    Ej: import random
+        numero_aleatorio = random.randint(1, 10)
+        if numero_aleatorio > 5:
+            print(f"El número aleatorio {numero_aleatorio} es mayor que 5.")
+        else:
+            print(f"El número aleatorio {numero_aleatorio} no es mayor que 5.")
+Otro tipo de condicional puede ser ELIF. 
+Si se tienen 2 o más condiciones en una misma variable, se puede realizar una acción si cumple las dos, si cumple solo una, y si no cumple ninguna:
+    Ej: if marca == 'ArgentinaLuz' and cantidad == 5:
+            descuento_2 = total * 0.40
+            precio_total_2 = total - descuento_2
+            alert('FELICIDADES', '¡Al comprar 5 lamparitas bajo consumo marca ArgentinaLuz, usted obtiene un descuento del 40%!. El total ahora es de $' + str(precio_total_2))
+        elif cantidad == 5:
+            descuento_3 = total * 0.30
+            precio_total_3 = total - descuento_3
+
+            alert('FELICIDADES', '¡Al comprar 5 lamparitas bajo consumo usted obtiene un descuento del 30%!. El total ahora es de $' + str(precio_total_3))
+También podemos hacer que se cumplan 2 condiciones de 1 variable dentro de un IF compuesto por 2 o variables:
+    Ej: if cantidad == 4 and marca == 'ArgentinaLuz' or marca == 'FelipeLamparas':
+            descuento_4 = total * 0.25
+            precio_total_4 = total - descuento_4
+
+            message = '¡Al comprar 4 lamparitas bajo consumo marca ArgentinaLuz o marca FelipeLamparas, usted obtiene un descuento del 25%!. El total ahora es de $' + str(precio_total_4)
+            alert('FELICIDADES', message)
+        elif cantidad == 4:
+            descuento_5 = total * 0.20
+            precio_total_5 = total - descuento_5
+
+            alert('FELICIDADES', '¡Al comprar 4 lamparitas bajo consumo usted obtiene un descuento del 20%!. El total ahora es de $' + str(precio_total_5))
+
+
+Se pueden randomizar números con el módulo RANDOM, el cual elige un número aleatorio. 
+También se pueden determinar los límites por los cuales RANDOM elige aleatoriamente un número:
+    Ej: numero_random = random.randint(1, 10)
+        alert('ADIVINACIÓN', 'USTED ESTABA PENSANDO EN EL NÚMERO ' + str(numero_random) + ', NO ES ASÍ?')
+Otra cosa que se puede hacer es agregar condiciones en base a los números aleatorios:
+    Ej: nota = random.randint(1, 10)
+
+        if nota >= 1 and nota <= 3:
+            alert('ATENCIÓN', 'USTED ESTÁ DESAPROBADO, LA NOTA ES UN ' + str(nota))
+        if nota >= 4 and nota <= 5:
+            alert('FELICIDADES', 'USTED ESTÁ APROBADO, LA NOTA ES UN ' + str(nota))
+        if nota >= 6 and nota <= 10:
+            alert('FELICITACIONES', 'USTED OBTUVO UNA PROMOCIÓN DIRECTA, LA NOTA ES UN ' + str(nota))

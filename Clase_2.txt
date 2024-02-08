@@ -38,7 +38,7 @@ FLOAT() hace lo mismo que el INT() pero la gran diferencia es que admite tambié
         alert('IMPORTE FINAL', 'El importe de sueldo actualizado con el incremento del 0.15 es de ' + str(importe))
 
 
-% (Módulo)=> Otorga el resto de una división.
+% (Módulo) => Otorga el resto de una división.
 
 ANOTACIÓN: PARA CALCULAR FÁCILMENTE UN AUMENTO O DECRECIMIENTO (EN PORCENTAJE) USAR LO SIGUIENTE:
         IMPORTE o SUELDO = int(self.txt_importe.get())
@@ -60,4 +60,14 @@ IF es un condicional. Permite que la máquina tome decisiones según ciertas con
             alert('ATENCIÓN', 'Usted tiene 18 años')
 
 Operadores lógicos:
-== => Comparación
+'==' => Comparación.
+'>' => Mayor que.
+'>=' => Mayor o igual que.
+'<' => Menor que.
+'<=' => Menor o igual que.
+
+FUNCIONES:
+' variable = math.ceil(variable) ' = Redondar un número hacia arriba (3.14 = 4).
+' variable = math.floor(variable) ' = Redondar un número hacia abajo (3.14 = 3).
+' variable = round(variable) ' = Redondar un número al entero más cercano (3.14 = 3)(3.50 = 4).
+' variable = round(variable, cantidad de decimales) ' = Redondar un número junto a x cantidad de decimales (3.141516 = 3.14).
