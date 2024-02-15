@@ -1,0 +1,37 @@
+La sentencia MATCH evalúa la información de una variable para hallar la igualdad.
+CASE son casos en los cuales pueden pasar cosas (como si fuese un IF).
+CASE_ es para casos en los cuales la condición no se cumple.
+    Ej: mes = self.combobox_mes.get()
+
+        match mes:
+            case 'Enero':
+                alert('¡Ya es Enero!', '¡Que comiences bien el año!')
+            case 'Marzo':
+                alert('¡Ya es Marzo!', '¡Comenzaron las clases!')
+            case 'Julio':
+                alert('¡Ya es Julio!', '¡Se acercan las vacaciones!')
+            case 'Diciembre':
+                alert('¡Ya es Diciembre!', '¡Felices fiestas!')
+            case _:
+                alert('ALERTA', 'PRUEBE OTRO MES')
+Usando el '|' podemos acortar notablemente el código sin la necesidad de ocupar tantas líneas de texto (como el ejemplo anterior).
+    Ej: mes = self.combobox_mes.get()
+
+        match mes:
+            case 'Julio' | 'Agosto':
+                mensaje = '¡Abrigate que hace frío!'
+            case 'Abril' | 'Mayo' | 'Junio':
+                mensaje = 'Todavía falta para el Invierno...'
+            case __:
+                mensaje = '¡Ya pasamos frío, ahora calor!'
+            
+        alert('ATENCIÓN', mensaje)
+
+WHILE es una sentencia repetitiva, su objetivo es repetir un ciclo meintras la variable cumpla la condición. 
+(IF y MATCH se detienen en un resulaado TRUE, WHILE se detienen un resultado FALSE)
+    Ej: contador = 1
+
+        while contador <= 10:
+            alert('CONTADOR', contador)
+        
+            contador = contador + 1

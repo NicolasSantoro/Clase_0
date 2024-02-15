@@ -11,9 +11,11 @@ Otra forma de hacerlo es con el ¨fString¨, el cual se le deben aplicar llaves 
         mensaje = f'Usted se llama {nombre_usuario} y su edad es de {edad_usuario} años'
 
 
-Hay 2 operadores (por el momento):
+Operadores (por el momento):
 = => Asignación
 + => Concatena variables y realiza sumas.
+% (Módulo) => Otorga el resto de una división.
+// => Otorga la parte entera de una división (sin la parte fraccionaria).
 
 
 El tipo de dato INT() transforma los resultados numéricos de texto (string) a un número entero.
