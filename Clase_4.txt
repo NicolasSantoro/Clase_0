@@ -1,0 +1,85 @@
+También se pueden ANIDAR los MATCH y los IF:
+    Ej: estacion_ingresada = self.combobox_estaciones.get()
+        destino_ingresado = self.combobox_destino.get()
+        
+        aumento = 0
+        descuento = 0
+        
+      
+        match estacion_ingresada:
+            case "Verano":
+                match destino_ingresado:
+                    case "Bariloche":
+                        descuento = 20
+                    case "Mar del plata":
+                        aumento = 20
+                    #Cataratas y Cordoba
+                    case _:
+                        aumento = 10
+            
+            case "Invierno":
+                match destino_ingresado:
+                    case "Bariloche":
+                        aumento = 20
+                    case "Mar del plata":
+                        descuento = 20
+                    #Cataratas y Córdoba
+                    case _:
+                        descuento = 10
+           
+            case _:
+                if destino_ingresado != "Cordoba":
+                    aumento = 10
+                    
+            
+        precio_aumento = (15000 * aumento / 100)
+        precio_descuento = (15000 * descuento / 100)
+        
+        precio_final = 15000 + precio_aumento - precio_descuento
+
+        mensaje = f"Usted pago ${precio_final} por su viaje a {destino_ingresado} en {estacion_ingresada}"
+        
+        alert("Ejercicio 9",mensaje)
+
+BREAK sirve para romper el WHILE (y no hacer que su bucle sea infinito).
+    Ej: clave = prompt('Ingrese la Clave', 'Clave')
+        contador = 0
+
+        while clave != 'utn750':
+            contador += 1
+            clave = prompt('', 'Ingrese Nuevamente la Clave')
+            
+            if contador == 3:
+                alert('', 'INTENTOS ACABADOS')
+                break
+
+        if clave == 'utn750':
+            alert('', 'CLAVE CORRECTA')
+
+WHILE suele usarse para contraseñas. Por ahora vimos 3 formas de hacerlo:
+    1) clave = prompt('Ingrese la Clave', 'Clave')
+        intentos = 0
+
+        while clave != 'utn750':
+            intentos += 1
+            clave = prompt('', 'Ingrese Nuevamente la Claveve')
+
+            if intentos <= 4:
+                alert('INTENTOS AGOTADOS')
+                break
+        if clave == 'utn750':
+            alert('', 'CLAVE CORRECTA')
+    
+    2) numero = prompt('Ingrese un Número', 'Número')
+        numero = int(numero)
+
+        while numero < 0 or numero > 9:
+            numero = prompt('ERROR', 'Ingrese Nuevamente')
+            numero = int(numero)
+
+    3) letra = prompt('Ingrese una Letra', 'Letra')
+
+        while letra != 'U' and letra != 'T' and letra != 'N':
+            letra = prompt('ERROR', 'Ingrese Nuevamente')
+        
+        alert('', 'Bienvenido')

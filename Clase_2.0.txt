@@ -67,6 +67,7 @@ Operadores lógicos:
 '>=' => Mayor o igual que.
 '<' => Menor que.
 '<=' => Menor o igual que.
+'!=' => Distinto que.
 
 FUNCIONES:
 ' variable = math.ceil(variable) ' = Redondar un número hacia arriba (3.14 = 4).
