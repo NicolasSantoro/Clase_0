@@ -1,0 +1,74 @@
+Con WHILE también se pueden hacer cálculos y promedios:
+    Ej 1: contador = 0
+        suma = 0
+
+        while contador < 5:
+            contador += 1
+
+            numero = prompt(' ',f'Coloque el número {contador}')
+            numero = int(numero)
+
+            suma = suma + numero
+        
+        self.txt_suma_acumulada.delete(0,tkinter.END)
+        self.txt_suma_acumulada.insert(0, suma)
+
+
+        promedio = suma / contador
+
+        self.txt_promedio.delete(0,tkinter.END)
+        self.txt_promedio.insert(0, promedio)
+
+    Ej 2: suma = 0
+        contador = 0
+
+        numero = prompt('','Coloque el número')
+
+        while numero != None:
+            contador += 1
+            numero = int(numero)
+            suma = suma + numero
+            
+            numero = prompt('','Coloque el número')
+        
+        self.txt_suma_acumulada.delete(0,tkinter.END)
+        self.txt_suma_acumulada.insert(0, suma)
+
+
+        promedio = suma / contador
+
+        self.txt_promedio.delete(0,tkinter.END)
+        self.txt_promedio.insert(0, promedio)
+
+        Las BANDERAS serían puntos de control (sean STR, INT, FLOAT, no importa) y sirve para determinados casos.
+        Por ejemplo, calcular màximos y mìmimos en una lista de nùmeros otorgados (por el usuario, en este caso).
+            Ej: bandera = False
+
+        while True:
+            numero = prompt('', 'Ingrese un Número')
+
+            if numero == None:
+                break
+
+            numero = int(numero)
+
+            if bandera == False:
+                maximo = numero
+                minimo = numero
+                bandera = True
+            else:
+                if numero > maximo:
+                    maximo = numero
+
+                if numero < minimo:
+                    minimo = numero
+            
+            numero = int(numero)
+        
+        self.txt_maximo.delete(0,tkinter.END)
+        self.txt_maximo.insert(0, maximo)
+
+        self.txt_minimo.delete(0,tkinter.END)
+        self.txt_minimo.insert(0, minimo)
+
+        (CONTRO + K + C = PONER VARIAS LÌNEAS DE CÒDIGO COMO COMENTARIO)
