@@ -1,0 +1,3 @@
+Con ABS() se puede conseguir el módulo (distancia del 0 sin importar su signo) de cualquier número.
+    Ej: resultado = contador_2 - contador_3
+        modulo = abs(resultado)
