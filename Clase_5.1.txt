@@ -40,9 +40,9 @@ Con WHILE también se pueden hacer cálculos y promedios:
         self.txt_promedio.delete(0,tkinter.END)
         self.txt_promedio.insert(0, promedio)
 
-        Las BANDERAS serían puntos de control (sean STR, INT, FLOAT, no importa) y sirve para determinados casos.
-        Por ejemplo, calcular máximos y mímimos en una lista de números otorgados (por el usuario, en este caso).
-            Ej: bandera = False
+    Las BANDERAS serían puntos de control (sean STR, INT, FLOAT, no importa) y sirve para chequear algo en un momento específico.
+    Por ejemplo, calcular máximos y mímimos en una lista de números otorgados (por el usuario, en este caso).
+        Ej: bandera = False
 
         while True:
             numero = prompt('', 'Ingrese un Número')
