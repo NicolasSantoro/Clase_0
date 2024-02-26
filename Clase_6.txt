@@ -1,0 +1,65 @@
+FOR es como el WHILE pero no se repite infinitamente, se repite una cantidad determinada (ya sea por nosotros o por el usuario) de veces.
+El RANGE() es lo que determina por cuál empieza, en dónde termina y tambipen si va hacia atrás, de 2 en 2, etc.
+    Ej 1: for numero in range(1, 6):
+            alert('CONTADOR', f'{numero}')
+    
+    Ej 2: for numero in range(5, 0, -1):
+            alert('CONTADOR', f'{numero}')
+    
+    Ej 3: cantidad = int(self.txt_repetir.get())
+
+        for i in range(cantidad):
+            alert('SALUDOS', 'HOLA UTN FRA')
+
+
+(MÉTODO PARA ENCONTRAR DIVISORES USANDO FOR:
+contador = 0
+
+        cantidad = int(prompt('', 'INGRESE UNA CANTIDAD'))
+
+        for i in range(1, cantidad+1):
+            if cantidad % i == 0:
+                alert(f'DIVISORES de {cantidad}', f'{i}')
+                contador += 1
+
+
+        alert(f'CANTIDAD DE DIVISIORES DE {cantidad}', f'Se encontraron {contador} números divisores.'))
+
+(MÉTODOS PARA ENCONTRAR PRIMOS USANDO FOR:
+1) contador = 0
+
+        numero = int(prompt('', 'INGRESE UN NÚMERO'))
+
+        for i in range(1, numero+1):
+            if numero % i == 0:
+                contador += 1
+            
+        if contador < 3:
+            alert('¿ES PRIMO?', f'Sí, {numero} es un número primo.')
+        else:
+            alert('¿ES PRIMO?', f'No, {numero} no es un número primo.')
+
+2) numero = int(prompt('', 'INGRESE UN NÚMERO'))
+        
+        if numero <= 1:
+            alert('ALERTA', 'Por favor, ingrese un número entero positivo mayor que 1.')
+        else:
+            contador_p = 0
+
+        for n in range(1, numero+1):
+            if n < 2:
+                continue
+            
+            primo = True
+
+            for i in range(2, n // 2 + 1):
+                if n % i == 0:
+                    primo = False
+                    break
+            
+            if primo:
+                alert('PRIMOS', f'{n}')
+                contador_p += 1
+            
+        
+        alert('PRIMOS', f'Se encontaron {contador_p} números primos.'))
